@@ -27,7 +27,7 @@ SECRET_KEY = '470ftg*p96bhdzb*yh9$)^-312%$6xr&iyh^d_sxt8zm3s_a$2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['django-awesome-blog.heroku.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['powerful-badlands-06092.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
