@@ -32,7 +32,7 @@ def contact(request):
             name,
            message,
             email,
-            ['to@example.com'],
+            ['mizalkaid@gmail.com'],
 
         )
 

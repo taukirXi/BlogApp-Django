@@ -27,7 +27,7 @@ SECRET_KEY = '470ftg*p96bhdzb*yh9$)^-312%$6xr&iyh^d_sxt8zm3s_a$2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['powerful-badlands-06092.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['vast-ravine-94794.herokuapp.com']
 
 
 # Application definition
@@ -124,11 +124,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')
                     ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressManifestStaticFilesStorage'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '587'
+EMAIL_PORT = 587
 EMAIL_USER = 'mizalkaid@gmail.com'
 EMAIL_PASSWORD = ''
 EMAIL_USE_TLS = True
