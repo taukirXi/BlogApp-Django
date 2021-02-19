@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .models import Post
+from .models import Post, Contact
 
 from django.views.generic import ListView
 from django.views.generic import DetailView
-from django.core.mail import send_mail
+
 
 
 class IndexView(ListView):
@@ -23,24 +23,20 @@ def about(request):
 def contact(request):
     template_name = 'contact.html'
     if request.method == 'POST':
-        # do something
+        contact = Contact()
         name = request.POST['name']
         email = request.POST['email']
-        phone_number = request.POST['phone-number']
+        phone_number = request.POST['phone']
         message = request.POST['message']
-        send_mail(
-            name,
-           message,
-            email,
-            ['mizalkaid@gmail.com'],
+        
+        contact.name = name
+        contact.email = email
+        contact.phone = phone_number
+        contact.message = message
+        contact.save()
 
-        )
 
-        context = {
-            'name': name,
-        }
-
-        return render(request, template_name, context)
+        return render(request, template_name, {'name': name})
     else:
         return render(request, template_name)
 
